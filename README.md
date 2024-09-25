@@ -1,65 +1,107 @@
-
 # Nome do Projeto
 
 Breve descrição do projeto. Explique o propósito da API e o que ela faz.
 
 ## Tecnologias Utilizadas
 
-- Node.js (ou outra linguagem usada)
-- Express (ou outro framework)
+- Node.js
+- Express
 - MongoDB
 - **Swagger** - Para documentar a API
 
-
 ## Endpoints da API
 
-### `GET /usuarios`
+### Endpoints de Usuários
 
-Retorna uma lista de todos os usuários.
+---
 
-- **URL**: `/usuarios`
+### `GET /user`
+
+Listar usuários registrados.
+
+- **URL**: `/user`
 - **Método**: `GET`
-- **Resposta**:
-  ```json
-  [
-    {
-      "id": 1,
-      "nome": "Usuário Exemplo",
-      "email": "email@example.com"
-    }
-  ]
-  ```
 
-### `POST /usuarios`
+### `POST /user`
 
-Cria um novo usuário.
+Criar novo usuário.
 
-- **URL**: `/usuarios`
+- **URL**: `/user`
 - **Método**: `POST`
-- **Body**:
-  ```json
-  {
-    "nome": "Novo Usuário",
-    "email": "novoemail@example.com"
-  }
-  ```
-- **Resposta**:
-  ```json
-  {
-    "id": 2,
-    "nome": "Novo Usuário",
-    "email": "novoemail@example.com"
-  }
-  ```
+
+### `GET /user/:id`
+
+Detalhar usuário por ID.
+
+- **URL**: `/user/:id`
+- **Método**: `GET`
+- **Parâmetros**:
+  - `id` (obrigatório): O ID do usuário a ser exibido.
+
+### `PUT /user/:id`
+
+Atualizar usuário por ID.
+
+- **URL**: `/user/:id`
+- **Método**: `PUT`
+- **Parâmetros**:
+  - `id` (obrigatório): O ID do usuário a ser atualizado.
 
 ### `DELETE /usuarios/:id`
 
-Deleta um usuário por ID.
+Deletar um usuário por ID.
 
 - **URL**: `/usuarios/:id`
 - **Método**: `DELETE`
 - **Parâmetros**:
   - `id` (obrigatório): O ID do usuário a ser deletado.
+
+---
+
+### Endpoints de Projetos
+
+---
+
+### `GET /project`
+
+Listar projetos registrados.
+
+- **URL**: `/project`
+- **Método**: `GET`
+
+### `POST /project`
+
+Criar novo projeto.
+
+- **URL**: `/project`
+- **Método**: `POST`
+
+### `GET /project/:id`
+
+Detalhar projeto por ID.
+
+- **URL**: `/project/:id`
+- **Método**: `GET`
+- **Parâmetros**:
+  - `id` (obrigatório): O ID do projeto a ser exibido.
+
+### `PUT /project/:id`
+
+Atualizar projeto por ID.
+
+- **URL**: `/project/:id`
+- **Método**: `PUT`
+- **Parâmetros**:
+  - `id` (obrigatório): O ID do projeto a ser atualizado.
+
+### `DELETE /project/:id`
+
+Deletar projeto por ID.
+
+- **URL**: `/project/:id`
+- **Método**: `DELETE`
+- **Parâmetros**:
+  - `id` (obrigatório): O ID do projeto a ser deletado.
 
 ## Autor
 
