@@ -1,6 +1,6 @@
-# Nome do Projeto
+# Persistência de Dados - Exercício Prático
 
-Breve descrição do projeto. Explique o propósito da API e o que ela faz.
+Exercicío prático que documenta a API utilizando Swagger
 
 ## Tecnologias Utilizadas
 
