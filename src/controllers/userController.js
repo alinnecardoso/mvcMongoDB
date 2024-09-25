@@ -2,7 +2,10 @@ var User = require('../models/userModel');
 
 exports.getUser = async (req,res) =>{
     /* 
-        #swagger.tags = ['Listar usuário']
+        #swagger.tags = ['Route User']
+        #swagger.summary = 'Listar usuários registrados'
+        #swagger.description = 'Esse endpoint vai mostrar os usuários registrados.'
+        #swagger.responses[200] = { description: 'Usuário encontrado.' }
      */
     try {
         const result = await User.find();
@@ -13,6 +16,14 @@ exports.getUser = async (req,res) =>{
 };
 
 exports.create = (req,res) => {
+    /*
+        #swagger.tags = ['Route User']
+        #swagger.summary = 'Criar novo usuário'
+        #swagger.description = 'Esse endpoint vai criar um novo usuário.'
+        #swagger.responses[201] = { description: 'Usuário cadastrado com sucesso.' }
+        #swagger.responses[500] = { description: 'Falha ao cadastar usuário.' }
+     */
+
     let user = new User(
         {
             name: req.body.name,
@@ -27,6 +38,13 @@ exports.create = (req,res) => {
 };
 
 exports.details = async (req, res) =>{
+    /*
+        #swagger.tags = ['Route User']
+        #swagger.summary = 'Detalhar usuário por ID'
+        #swagger.description = 'Esse endpoint irá mostrar os  detalhes do usuário pelo ID'
+        #swagger.responses[200] = { description: 'Usuário encontrado.' }
+        #swagger.responses[500] = { description: 'Usuário não encontrado.' }
+    */
     try {
         const result = await User.findById(req.params.id);
         res.status(200).json(result)
@@ -36,6 +54,13 @@ exports.details = async (req, res) =>{
 }
 
 exports.update = async (req, res) => {
+    /*
+        #swagger.tags = ['Route User']
+        #swagger.summary = 'Atualizar usuário por ID'
+        #swagger.description = 'Esse endpoint irá atualizar usuário pelo ID'
+        #swagger.responses[200] = { description: 'Usuário atualizado com sucesso.' }
+        #swagger.responses[500] = { description: 'Usuário não encontrado.' }
+    */
     const { id } = req.params;
     const { name, age } = req.body;
         
@@ -48,6 +73,13 @@ exports.update = async (req, res) => {
 }
 
 exports.delete = async (req, res) => {
+    /*
+        #swagger.tags = ['Route User']
+        #swagger.summary = 'Deletar usuário por ID'
+        #swagger.description = 'Esse endpoint irá deletar o usuário pelo ID'
+        #swagger.responses[200] = { description: 'Usuário deletado com sucesso.' }
+        #swagger.responses[500] = { description: 'Usuário não encontrado.' }
+    */
     const { id } = req.params;
 
     try {

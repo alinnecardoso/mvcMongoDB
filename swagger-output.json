@@ -7,16 +7,20 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000"
+      "url": "http://localhost:3001"
     }
   ],
   "paths": {
     "/user": {
       "get": {
-        "description": "",
+        "tags": [
+          "Route User"
+        ],
+        "summary": "Listar usuários registrados",
+        "description": "Esse endpoint vai mostrar os usuários registrados.",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Usuário encontrado."
           },
           "500": {
             "description": "Internal Server Error"
@@ -24,13 +28,17 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Route User"
+        ],
+        "summary": "Criar novo usuário",
+        "description": "Esse endpoint vai criar um novo usuário.",
         "responses": {
           "201": {
-            "description": "Created"
+            "description": "Usuário cadastrado com sucesso."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Falha ao cadastar usuário."
           }
         },
         "requestBody": {
@@ -54,7 +62,11 @@
     },
     "/user/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Route User"
+        ],
+        "summary": "Detalhar usuário por ID",
+        "description": "Esse endpoint irá mostrar os detalhes do usuário pelo ID",
         "parameters": [
           {
             "name": "id",
@@ -67,15 +79,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Usuário encontrado."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Usuário não encontrado."
           }
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Route User"
+        ],
+        "summary": "Atualizar usuário por ID",
+        "description": "Esse endpoint irá atualizar usuário pelo ID",
         "parameters": [
           {
             "name": "id",
@@ -88,10 +104,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Usuário atualizado com sucesso."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Usuário não encontrado."
           }
         },
         "requestBody": {
@@ -113,7 +129,11 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Route User"
+        ],
+        "summary": "Deletar usuário por ID",
+        "description": "Esse endpoint irá deletar o usuário pelo ID",
         "parameters": [
           {
             "name": "id",
@@ -126,20 +146,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Usuário deletado com sucesso."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Usuário não encontrado."
           }
         }
       }
     },
     "/project": {
       "get": {
-        "description": "",
+        "tags": [
+          "Route Project"
+        ],
+        "summary": "Listar projetos registrados",
+        "description": "Esse endpoint vai mostrar os projetos registrados.",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Projeto encontrado."
           },
           "500": {
             "description": "Internal Server Error"
@@ -147,13 +171,17 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Route Project"
+        ],
+        "summary": "Criar novo projeto",
+        "description": "Esse endpoint vai criar um novo projeto.",
         "responses": {
           "201": {
-            "description": "Created"
+            "description": "Projeto cadastrado com sucesso."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Falha ao cadastar projeto."
           }
         },
         "requestBody": {
@@ -180,7 +208,11 @@
     },
     "/project/{id}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Route Project"
+        ],
+        "summary": "Detalhar projeto por ID",
+        "description": "Esse endpoint irá mostrar os detalhes do projeto pelo ID",
         "parameters": [
           {
             "name": "id",
@@ -193,15 +225,19 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Projeto encontrado."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Projeto não encontrado."
           }
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Route Project"
+        ],
+        "summary": "Atualizar projeto por ID",
+        "description": "Esse endpoint irá atualizar projeto pelo ID",
         "parameters": [
           {
             "name": "id",
@@ -214,10 +250,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Projeto atualizado com sucesso."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Projeto não encontrado."
           }
         },
         "requestBody": {
@@ -242,7 +278,11 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Route Project"
+        ],
+        "summary": "Deletar projeto por ID",
+        "description": "Esse endpoint irá deletar o projeto pelo ID",
         "parameters": [
           {
             "name": "id",
@@ -255,10 +295,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Projeto deletado com sucesso."
           },
           "500": {
-            "description": "Internal Server Error"
+            "description": "Projeto não encontrado."
           }
         }
       }

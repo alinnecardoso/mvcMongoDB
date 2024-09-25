@@ -14,7 +14,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger-output.json');
 
 //MonngoDB config
-let url = 'mongodb://localhost:27017/Fatec';
+let url = 'mongodb+srv://alinne:xZa8i5kEiQmM7sPL@clusterfatec.3m2te.mongodb.net/?retryWrites=true&w=majority&appName=ClusterFatec';
 let mongodb = process.env.MONGO_URI || url;
 mongoose.connect(mongodb);
 mongoose.Promise = global.Promise;
@@ -35,6 +35,6 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 
 //Servidor
-app.listen(3000, () =>{
-    console.log('Servidor rodando na porta 3000');
+app.listen(3001, () =>{
+    console.log('Servidor rodando na porta 3001');
 })
