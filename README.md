@@ -47,11 +47,11 @@ Atualizar usuário por ID.
 - **Parâmetros**:
   - `id` (obrigatório): O ID do usuário a ser atualizado.
 
-### `DELETE /usuarios/:id`
+### `DELETE /user/:id`
 
 Deletar um usuário por ID.
 
-- **URL**: `/usuarios/:id`
+- **URL**: `/user/:id`
 - **Método**: `DELETE`
 - **Parâmetros**:
   - `id` (obrigatório): O ID do usuário a ser deletado.
